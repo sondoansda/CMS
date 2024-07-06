@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Register Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row justify-content-center align-content-center vh-100">
+        <div class="col-4">
+            <form th:action="@{/register}" id="form-register" th:method="post" th:object="${userRegister}">
+                <div class="card">
+                    <div class="card-header">Register</div>
+                    <div class="card-body">
+                        <div>
+                            <label class="d-block w-100">
+                                <input class="form-control mb-3" type="text" placeholder="User name" name="username" maxlength="50">
+                            </label>
+                        </div>
+                        <div>
+                            <label class="d-block w-100">
+                                <input class="form-control mb-3" type="email" placeholder="Email" name="email" maxlength="50">
+                            </label>
+                        </div>
+                        <div>
+                            <label for="password" class="d-block w-100">
+                                <input class="form-control mb-3" type="password" placeholder="Password" name="password" id="password" maxlength="50">
+                            </label>
+                        </div>
+                        <div>
+                            <label class="d-block w-100">
+                                <input class="form-control mb-3" type="password" placeholder="Re-enter Password" name="re_password" maxlength="50">
+                            </label>
+                        </div>
+                        <div class="d-grid mb-3">
+                            <button class="btn btn-success" type="submit">Register</button>
+                        </div>
+                        <div class="mb-3">
+                            <a class="text-decoration-none" th:href="@{/login}">Click here to Login</a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.0/jquery.validate.min.js" integrity="sha512-WMEKGZ7L5LWgaPeJtw9MBM4i5w5OSBlSjTjCtSnvFJGSVD26gE5+Td12qN5pvWXhuWaWcVwF++F7aqu9cvqP0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script th:src="@{/js/ValidateRegister.js}"></script>
+</body>
+</html>

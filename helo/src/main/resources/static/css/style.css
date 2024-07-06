@@ -1,0 +1,13 @@
+.error{
+    color: red ;
+}
+.container-fluid{
+    background-color: #f8f8f8;
+}
+.contenthover:hover{
+    background-color: #EEE;
+}
+.navbackground{
+    background-color: #f8f8f8;
+}
+
